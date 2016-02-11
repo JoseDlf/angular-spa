@@ -1,7 +1,7 @@
 // script.js
 
     // create the module and name it scotchApp
-        // also include ngRoute for all our routing needs
+    // also include ngRoute for all our routing needs
     var scotchApp = angular.module('scotchApp', ['ngRoute']);
 
     // configure our routes
@@ -21,9 +21,10 @@
             })
 
             // route for the contact page
+            // con el ctrl en un archivo a parte
             .when('/contact', {
                 templateUrl : 'pages/contact.html',
-                controller  : 'contactController'
+                controller  : 'contactCtrl' //'contactController'
             });
 
             // use the HTML5 History API
@@ -41,6 +42,6 @@
         $scope.message = 'Acerca de mi: fascinante, asombroso, el hombre que hizo llorar a Spielberg';
     });
 
-    scotchApp.controller('contactController', function($scope) {
-        $scope.message = "Don't be shy and contact us!";
-    });
+   // scotchApp.controller('contactController', function($scope) {
+      //  $scope.message = "Don't be shy and contact us!";
+    //});
